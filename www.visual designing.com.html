@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graphic designing</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: GREY;
+            color: #333;
+        }
+
+        header {
+            background-color: #800000;
+            color: black;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            text-align: center; 
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .logo-container .logo {
+            width: 120px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            text-align: center;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        nav {
+            background-color: grey;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: solid black;
+            font-size: 1em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background:linear-gradient(45deg, #ffebe0, #fff5f2);;
+            text-align: center;
+            padding: 60px 20px;
+			color:solid black
+        }
+
+        .hero h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin: 20px 0 0;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .product-card {
+            background-color: brown;
+            border: 1px solid black;
+            border-radius: 9px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .product-card img {
+            width: 50%;
+            height: auto;
+        }
+
+        .product-card h3 {
+            margin: 10px 0 5px;
+            font-size: 1.2em;
+            color: black;
+        }
+
+        .product-card p {
+            font-size: 0.95em;
+            color: black;
+        }
+
+        .product-card button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: black;
+            color: brown;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .product-card button:hover {
+            background-color: purple;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9em;
+        }
+
+        /* Cart and Checkout Styles */
+        .cart {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .cart-items {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cart-items li {
+            margin: 10px 0;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 10px 5px;
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #218838;
+        }
+
+        .buy-section {
+            display: none;
+        }
+
+        .buy-section input {
+            margin: 10px 0;
+            width: 100%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo 3x.png" alt="Company Logo" class="logo"> <!-- Add your logo image -->
+        </div>
+        <h1> Graphic designing</h1>
+        <p>Where passion meets creativity & creativity meets innovation!</p>
+    </header>
+
+    <nav>
+        <b>
+            <a href="#about">About</a>
+            <a href="#services">Our services</a>
+            <a href="#contact">Contact</a>
+        </b>
+    </nav>
+
+    <section class="hero">
+        <h1>Creativity of visualisation</h1>
+        <p> Dear customer! Crafting visuals that captivate, inspire and engage you.</p>
+    </section>
+	
+     <section class="hero">
+        <h1>Designing your brand's identity</h1>
+        <p> We craft a unique visual identity that inspires your audience and brings your brand to life.</p>
+    </section>
+
+    <section id="about us">
+        <h2> About graphic designing brand </h2>
+        <p> We are professional graphic designer with a passion for creative and innovative design. We work with clients to bring their ideas to life, whether it's through branding theme, brand logos, print materials or interior designing.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our services</h2>
+        <div class="product">
+            <!-- product Cards -->
+            <!-- Example product Card -->
+            <div class="product-card">
+                <img src="interior.JPG" alt="interior designing" width="250" height="250">
+                <h3>interior styling </h3>
+                <p>Fascinate your lifestyle.</p>
+                <button onclick="addToCart('interior design poster', 2000)">Add to Cart</button>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+			<div class="product-card">
+                <img src="magazine1.png" alt="magazine 1st">
+                <h3>magazines</h3>
+                <p>create own magazines with graphics
+				here are the samples.</p>
+                <button onclick="addToCart('magazine 1st', 4000)">Add to Cart</button>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+			 <div class="product-card">
+                <img src="magazine2.png" alt="magazine 2nd">
+                <h3>other magazines</h3>
+                <p> samples of great graphics.</p>
+                <button onclick="addToCart('magazine 2nd', 3000)">Add to Cart</button>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+			 <div class="product-card">
+                <img src="posters.jpg" alt="print design">
+                <h3>print design</h3>
+                <p>adorable print design with amazing pixels.</p>
+                <button onclick="addToCart('posters', 2000)">Add to Cart</button>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+			 <div class="product-card">
+                <img src="interior portfolio.jpg" alt="interior portfolio">
+                <h3>interior portfolio </h3>
+                <p>design that create  your own interest and make your vision come true.</p>
+                <button onclick="addToCart('interior portfolio', 5000)">Add to Cart</button>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+			 <div class="product-card">
+                <img src="logo.png" alt="brand logo">
+                <h3>brand logos</h3>
+                <p>Bringing brands to life through bold visual design</p>
+                <button onclick="addToCart('brand logo', 1000)">Add to Cart</button>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+			 <div class="product-card">
+                <img src="photographs.png." alt="photographs">
+                <h3> photographics </h3>
+                <p>smart pixels creat soothing impact.</p>
+                <button onclick="addToCart('photographics', 5000)">Add to Cart</button>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+			<div class="product-card">
+                <img src="visual arts.png" alt="visual arts">
+                <h3>Visual Arts</h3>
+                <p> innovate visual arts.</p>
+                <button onclick="addToCart('visual arts', 3000)">Add to Cart</button>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+			<div class="product-card">
+                <img src="brand luxury.png" alt="brand lusury poster">
+                <h3>brand luxury</h3>
+                <p>Experience the pinnacle of luxury, crafted with precision and passion.</p>
+                <button onclick="addToCart('brand luxury', 2000)">Add to Cart</button>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="cart" id="cart">
+        <h2>Shopping Cart</h2>
+        <ul class="cart-items" id="cartItems"></ul>
+        <p>Total: RS.<span id="cartTotal">0</span></p>
+        <button class="button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+    </div>
+
+    <div class="buy-section" id="buySection">
+        <h2>Checkout</h2>
+        <form id="checkoutForm">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <input type="text" placeholder="Shipping Address" required />
+            <button type="submit" class="button">Place Order</button>
+        </form>
+    </div>
+	
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or need support? Reach us:</p>
+        <p>Email: visualdesigning@.com</p>
+        <p>Phone: <a href="tel:+923342737458">+923342737458</a></p>
+        <p>Direct Order on WhatsApp: 
+            <a href="https://wa.me/923114073733" target="_blank">
+                <button class="button">Place Order on WhatsApp</button>
+            </a>
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 visual designing |All rights reserved.</p>
+    </footer>
+
+    <script>
+        let cart = [];
+        let total = 0;
+
+        function addToCart(productName, price) {
+            cart.push({ name: productName, price: price });
+            total += price;
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartElement = document.getElementById('cart');
+            const cartItemsElement = document.getElementById('cartItems');
+            const cartTotalElement = document.getElementById('cartTotal');
+            cartElement.style.display = 'block';
+            cartTotalElement.textContent = total;
+        }
+
+        function buyNow() {
+            window.location.href = 'https://wa.me/923306764506?text=I%20would%20like%20to%20order%20products%20from%20Bloom%20Beauty.';
+        }
+
+        function proceedToCheckout() {
+            document.getElementById('buySection').style.display = 'block';
+        }
+
+        const checkoutForm = document.getElementById('checkoutForm');
+        checkoutForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Order placed successfully!');
+            cart = [];
+            total = 0;
+            updateCart();
+            document.getElementById('cart').style.display = 'none';
+            document.getElementById('buySection').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
